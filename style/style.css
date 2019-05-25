@@ -94,7 +94,7 @@
  }
 
 .hero-icons-wrapper i:first-child {
-    transform: rotate(-90deg) translateX(0);
+    transform: rotate(-90deg);
     font-size: 20px;
     color: #fff; 
     animation: hero-pointer 2s linear alternate infinite;  
@@ -102,7 +102,7 @@
 
 .hero-icons-wrapper i:last-child {
     padding-top: 10px;
-    font-size: 20px;
+    font-size: 25px;
     color: #fff;
     margin: 0 auto;
     animation: hero-arrow 2s linear alternate infinite; 
@@ -157,6 +157,20 @@ main section.my-stack .devices {
     transform: skew(-3deg, 14deg) translate(180px, -60px);
 }
 
+.desktop-wrapper p,
+.mobile-wrapper p {
+    font-size: 18px;
+    padding: 30px;
+    text-align: justify;
+    margin: 0 30px 30px;
+    transition: .4s;
+}
+.desktop-wrapper p:hover,
+.mobile-wrapper p:hover {
+    transform: scale(1.03);
+    box-shadow: 1px 10px 20px #000;
+}
+
 main div.technologies {
     display: flex;
 }
@@ -204,13 +218,114 @@ main div.technologies {
     justify-content: center;
     align-items: center;
     border-top: 2px solid rgb(19, 214, 36);
-    /* background-color: rgb(19, 214, 36); */
 }
 .tech-mac-wrapper img {
     width: 80%;
     height: 80%;
     transform: rotateY(220deg);
 }
+
+/* section portfolio */
+section.portfolio {
+    padding: 50px 0;
+}
+
+section.portfolio nav {
+    display: flex;
+    flex: 1 1;
+    justify-content: center;
+    align-items: stretch;
+    width: 95%;
+    margin: 20px auto 0;
+}
+
+section.portfolio nav>* {
+    flex-basis: 35%;
+}
+
+section.portfolio figure {
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    border-radius: 20px 20px 0 0;
+}
+
+.portfolio nav figure.selected {
+    background-color: #eee;
+}
+
+section.portfolio figure img {
+    height: 60px;
+    width: 40%;
+}
+section.portfolio figure:nth-of-type(2) img {
+    width: 15%;
+}
+section.portfolio figure span i {
+    color: #F0D91D;
+    font-size: 30px;
+}
+section.portfolio figure:nth-of-type(2) span i {
+    color: #391F5B;
+}
+section.portfolio figure:nth-of-type(3) span span {
+    color: #764ABC;
+    font-weight: bold;
+}
+
+section.portfolio aside .projects {
+    display: none;
+}
+
+section.portfolio aside .projects.selected {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;   
+    width: 95%;
+    margin: 0 auto;
+    background-color: #eee;
+}
+
+
+section.portfolio aside .project-page {
+    position: relative;
+    /* background-color: #fff; */
+    height: 300px;
+    flex-basis: 25%;
+}
+
+section.portfolio aside .panel {
+    position: absolute;
+    left: 0;
+    bottom: 0%;
+    width: 100%;
+    height: 25%;
+    text-align: center;
+}
+
+
+aside .panel a {
+    font-size: 18px;
+    color: red;
+    padding: 10px;
+} 
+
+aside .panel button {
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: transparent;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .5s;
+    margin-top: 10px;
+}
+
+
 
 /* section globe */
 
@@ -263,7 +378,9 @@ main section.globe {
     text-transform: capitalize;
 }
 
-.globe div:last-child button {
+.globe div:last-child button,
+.desktop-wrapper button,
+.mobile-wrapper button {
     width: 85%;
     margin: 0 auto;
     padding: 10px 0;
@@ -277,11 +394,15 @@ main section.globe {
     transition: .5s;
 }
 
-.globe div:last-child button:hover {
+.globe div:last-child button:hover,
+.desktop-wrapper button:hover,
+.mobile-wrapper button:hover  {
     color: rgb(19, 214, 36);
 }
 
-.globe div:last-child button i {
+.globe div:last-child button i,
+.desktop-wrapper button i,
+.mobile-wrapper button i {
     margin-left: 5px;
     color: rgb(93, 200, 102);
     font-weight: bold;
@@ -290,8 +411,15 @@ main section.globe {
     animation: button-arrow 1.5s linear alternate infinite;
 }
 
-.globe div:last-child button:hover i {
+.globe div:last-child button:hover i,
+.desktop-wrapper button:hover i,
+.mobile-wrapper button:hover i {
     color: black;
+}
+
+.desktop-wrapper button,
+.mobile-wrapper button {
+    width: 40%;
 }
 
 @keyframes globe-rotate {
@@ -313,6 +441,6 @@ main section.globe {
 }
 @keyframes hero-arrow {
     to {
-        color: rgb(19, 214, 36);
+      color: rgb(19, 214, 36);  
     }
 }
