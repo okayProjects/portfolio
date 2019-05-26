@@ -21,9 +21,9 @@
                     <span>{ okayProjects }</span>
                 </div>
                 <ul>
-                    <li class="nav-item"><a href="#">About</a></li>
-                    <li class="nav-item"><a href="#">Projects</a></li>
-                    <li class="nav-item"><a href="#">Contact</a></li>
+                    <li class="nav-item"><a class="about" href="#">About my work</a></li>
+                    <li class="nav-item"><a class="portfolio" href="#">Portfolio projects</a></li>
+                    <li class="nav-item"><a class="contact" href="#">Contact</a></li>
                 </ul>
             </nav>
             <div class="hero-slogan-wrapper">
@@ -37,7 +37,7 @@
         </div>
     </header>
     <main>
-        <section class="my-stack">
+        <section class="my-stack" data-section='about'>
             <div class="devices">
                 <div class="desktop-wrapper">
                     <div>
@@ -85,7 +85,8 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio">
+        <section class="portfolio" data-section="portfolio">
+            <h1>My projects</h1>
             <nav>
                 <figure class="selected">
                     <img src="/assets/images/frontendstock.png" alt="frontendstock">
@@ -122,13 +123,11 @@
                 <button>just a click away<i class="fas fa-long-arrow-alt-right"></i></button>
             </div>
         </section>
-
-
-        <section></section>
     </main>
+    <footer data-section="contact"></footer>
 </body>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/scripts/scripts.js"></script>
 
 </html>
