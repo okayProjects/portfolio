@@ -12,7 +12,7 @@
     align-items: center;
     max-width: 100vw;
     height: 100vh;
-    background-image: url('../assets/images/freelancer.jpg');
+    background-image: url('../assets/images/hero-background.jpg');
     background-position: 40% center;
     background-size: cover;
     background-attachment: fixed;
@@ -20,7 +20,7 @@
 
 .hero-nav {
     position: fixed;
-    top: -20%;
+    top: 0;
     left: 0;
     width: 100%;
     display: flex;
@@ -31,8 +31,8 @@
     transition: .4s linear;
 }
 
-.hero-nav.visible{
-    top: 0;
+.hero-nav.invisible{
+    top: -20%;
 }
 
 .hero-nav.color {
@@ -42,10 +42,12 @@
 .hero-nav .logo {
     flex-basis: 20%;
     color: #fff;
+    
 }
 
 .logo span {
     font-size: 20px;
+    text-shadow: 2px 2px #000;
 }
 
 .hero-nav ul {
@@ -66,6 +68,7 @@
     font-size: 20px;
     color: #fff;
     text-decoration: none;
+    text-shadow: 2px 2px #000;
 }
 
 .nav-item a::before {
@@ -90,9 +93,16 @@
     align-items: center;
     justify-content: center;
 }
-.hero-slogan-wrapper h1 {
+.hero-slogan-wrapper h1,
+.hero-slogan-wrapper p {
     font-size: 60px;
     color: #fff;
+    text-shadow: 2px 2px #000;
+    letter-spacing: 7px;
+}
+
+.hero-slogan-wrapper p {
+    font-size: 30px;
 }
 
 .hero-icons-wrapper {
@@ -144,7 +154,6 @@ main section.my-stack .devices {
 }
 .desktop-wrapper .desktop-img-wrapper {
     order: -1;
-    border-bottom: 2px solid rgb(19, 214, 36);
 }
 .desktop-wrapper .desktop-img-wrapper.animated {
     transform: skewY(-15deg) translateY(50px);
@@ -226,8 +235,31 @@ main div.technologies {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
+
+.tech-icon-wrapper div:not(.h1-wrapper) {
+    transform: scale(0);
+}
+
+
+.tech-icon-wrapper div:not(.h1-wrapper).animated {
+    animation: technologies .5s forwards;
+}
+
+.tech-icon-wrapper div:nth-of-type(3):not(.h1-wrapper),
+.tech-icon-wrapper div:nth-of-type(7):not(.h1-wrapper) {
+    animation-delay: .4s;
+}
+.tech-icon-wrapper div:nth-of-type(4):not(.h1-wrapper),
+.tech-icon-wrapper div:nth-of-type(8):not(.h1-wrapper) {
+    animation-delay: .7s;
+}
+.tech-icon-wrapper div:nth-of-type(5):not(.h1-wrapper),
+.tech-icon-wrapper div:nth-of-type(9):not(.h1-wrapper) {
+    animation-delay: 1.1s;
+}
+
+
 .tech-icon-wrapper div:hover {
     background-color: #391F5B;
 }
@@ -238,6 +270,7 @@ main div.technologies {
 }
 
 .tech-mac-wrapper {
+    position: relative;
     height: 100vh;
     flex-grow: 1;
     display: flex;
@@ -251,20 +284,21 @@ main div.technologies {
     transform: rotateY(220deg);
 }
 
+
 /* section portfolio */
 section.portfolio {
     padding: 50px 0;
     text-align: center;
 }
 .portfolio h1 {
-    font-size: 40px;
+    font-size: 30px;
     flex-basis: 100%;
     color: #fff;
     font-weight: bold;
     margin:0 10px 50px;
     padding: 20px 0;
     letter-spacing: 6px;
-    background-color: rgb(19, 214, 36);
+    background-color: #391F5B;
 }
 
 section.portfolio nav {
@@ -277,22 +311,25 @@ section.portfolio nav {
 }
 
 section.portfolio nav>* {
-    flex-basis: 35%;
+    flex-basis: 40%;
 }
 
 section.portfolio figure {
     text-align: center;
     padding: 20px;
     cursor: pointer;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0; 
+    border-bottom: 1px solid #391F5B;
 }
 
 .portfolio nav figure.selected {
     background-color: #eee;
+    border: 1px solid #391F5B;
+    border-bottom: none;
 }
 
 section.portfolio figure img {
-    height: 80px;
+    height: 70px;
     width: 50%;
 }
 section.portfolio figure:nth-of-type(2) img {
@@ -312,7 +349,26 @@ section.portfolio figure:nth-of-type(3) span span {
 
 section.portfolio aside .projects {
     display: none;
+    border: 1px solid #391F5B;
+    
 }
+
+section.portfolio aside .project-desc {
+    background-color: #391F5B;
+    width: 95%;
+    margin: 0 auto;
+    border: 1px solid #391F5B;
+    border-top: none;
+    padding: 30px;
+    text-align: justify;
+    display: none;
+}
+
+section.portfolio aside .project-desc p {
+    font-size: 18px;
+    color: #fff;
+}
+
 
 section.portfolio aside .projects.selected {
     display: flex;
@@ -323,7 +379,7 @@ section.portfolio aside .projects.selected {
     margin: 0 auto;
     padding: 40px 0;
     background-color: #eee;
-    
+    border-top: none;
 }
 
 
@@ -331,40 +387,91 @@ section.portfolio aside .project-page {
     position: relative;
     background-color: #ddd;
     height: 300px;
-    flex-basis: 30%;
+    flex-basis: 40%;
     margin: 20px;
+    overflow: hidden;
 }
 
 section.portfolio aside .panel {
     position: absolute;
     left: 0;
-    bottom: 0%;
+    bottom: -40%;
     width: 100%;
-    height: 25%;
+    height: 30%;
     text-align: center;
+    background-color: #391F5B;
+    transition: .5s;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
+section.portfolio .project-page:hover .panel {
+    bottom: 0;
+}
 
-.portfolio aside .panel a {
+.portfolio aside .panel a,
+.portfolio aside .panel i {
+    color: #fff;
     font-size: 18px;
-    color: red;
-    padding: 10px;
-} 
+    padding: 0 5px;
+    text-decoration: none;
+}
 
-.porfolio aside .panel button {
-    padding: 5px 10px;
-    font-size: 15px;
-    font-weight: bold;
+.portfolio aside .panel a:hover {
+    text-decoration: underline;
+}
+
+.portfolio aside .panel i {
+    color: rgb(93, 200, 102);
+    font-size: 18px;
+}
+
+.panel i:nth-of-type(2) {
+    margin-left: 15px;
+}
+
+.project-page img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    transition: .5s;
+}
+.project-page img:hover {
+    transform: scale(1.2);
+}
+
+.portfolio aside .panel button {
+    flex-basis: 55%;
+    padding: 3px;
+    font-size: 18px;
     border-radius: 5px;
-    border: 1px solid black;
-    background-color: transparent;
+    color: #fff;
+    letter-spacing: 1px;
+    color: #391F5B;
+    background-color: #fff;
+    border: 1px solid #391F5B;
     text-transform: capitalize;
     cursor: pointer;
     transition: .5s;
-    margin-top: 10px;
 }
 
+.panel button:hover  {
+    color: #fff;
+    background-color: #391F5B;
+    border: 1px solid #fff;
+}
 
+.panel button i {
+    margin-left: 5px;
+    color: rgb(93, 200, 102);
+    font-weight: bold;
+    font-size: 20px;
+    transition: .5s;
+    animation: button-arrow 1.5s linear alternate infinite;
+}
 
 /* section globe */
 
@@ -400,6 +507,7 @@ main section.globe {
     text-align: center;
     letter-spacing: 3px;
     color: rgb(19, 214, 36);
+    transition: .5s;
 }
 
 .globe div:last-child {
@@ -461,10 +569,149 @@ main section.globe {
     width: 40%;
 }
 
+
 footer {
     height: 100vh;
-    background-color: blue;
+    background-image: url('/assets/images/laptop.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
+
+footer .footer-slogan-wrapper {
+    margin: 2% 25px 30px 25px;
+    width: 50%;
+    flex-basis: 10%;
+    border-radius: 5px;
+    font-size: 28px;
+    text-transform: capitalize;
+    padding: 20px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 6px;
+    text-shadow: 2px 2px #000;
+    background-color: rgb(57, 31, 91, .5);
+}
+
+footer .contact-forms {
+    position: relative;
+    width: 50%;
+    flex-grow: 1;
+    margin: 0 25px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .footer-media-wrapper {
+    position: absolute;
+    left: 10%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.footer-media-wrapper span,
+.footer-media-wrapper span a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    transform: translate(700px);
+    transition: .5s;
+}
+
+.footer-media-wrapper span.move {
+    transform: translate(0)
+}
+
+.footer-media-wrapper div i {
+    color: #fff;
+    font-size: 40px;
+}
+
+.footer-media-wrapper span:hover {
+    transform: translateX(15px);
+}
+
+footer div.footer-media-wrapper div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: black;
+    margin-right: 30px;
+    transition: .5s;
+}
+
+.contact-forms .footer-media-wrapper:first-of-type div {
+    background-color: #BE5242;
+    transition: .5s;
+    transform: scale(1);
+}
+.contact-forms .footer-media-wrapper:nth-of-type(2) div {
+    background-color: #310083;
+    transition: .5s;
+    transform: scale(1);
+}
+.contact-forms .footer-media-wrapper:nth-of-type(3) div {
+    background-color: #0077B5;
+    transition: .5s;
+    transform: scale(1);
+}
+.contact-forms .footer-media-wrapper:last-of-type div {
+    background-color: #000;
+    transition: .5s;
+    transform: scale(1);
+}
+.contact-forms .footer-media-wrapper:first-of-type div:hover {
+    background-color: #fff;
+    transform: scale(1.2);
+    border: 1px solid #BE5242;
+}
+
+.contact-forms .footer-media-wrapper:first-of-type div:hover i {
+    color: #BE5242;
+}
+
+.contact-forms .footer-media-wrapper:nth-of-type(2) div:hover {
+    background-color: #fff;
+    transform: scale(1.2);
+    border: 1px solid #310083;
+}
+.contact-forms .footer-media-wrapper:nth-of-type(2) div:hover i {
+    color: #310083; 
+}
+.contact-forms .footer-media-wrapper:nth-of-type(3) div:hover {
+    background-color: #fff;
+    transform: scale(1.2);
+    border: 1px solid #0077B5;
+}
+.contact-forms .footer-media-wrapper:nth-of-type(3) div:hover i {
+    color: #0077B5;
+}
+.contact-forms .footer-media-wrapper:last-of-type div:hover {
+    background-color: #fff;
+    transform: scale(1.2);
+    border: 1px solid #000;
+}
+.contact-forms .footer-media-wrapper:last-of-type div:hover i {
+    color: #000;
+}
+
+
+
 
 @keyframes globe-rotate {
     to {
@@ -486,5 +733,11 @@ footer {
 @keyframes hero-arrow {
     to {
       color: rgb(19, 214, 36);  
+    }
+}
+
+@keyframes technologies {
+    to {
+        transform: scale(1);
     }
 }
