@@ -6,7 +6,7 @@ const goToSection = function () {
     const whereToGo = '[data-section=' + this.classList[0] + ']';
     const goToThisSection = document.querySelector(whereToGo).offsetTop;
     $('body, html').animate({
-        scrollTop: goToThisSection
+        scrollTop: goToThisSection + 5
     });
 }
 
@@ -358,7 +358,7 @@ const gotoFooter = (e) => {
     const name = e.target.name;
     if (name === 'globe') {
         const globeSlogan = document.querySelector('.globe-wrapper h2');
-        globeSlogan.style.color = 'rgb(57, 31, 91, .5)';
+        // globeSlogan.style.color = 'rgb(57, 31, 91, .5)';
         globeSlogan.style.fontWeight = 'bold';
         globeSlogan.style.transform = 'scale(1.2)';
         setTimeout(() => {
