@@ -91,21 +91,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    perspective: 200px;
 }
 .hero-slogan-wrapper h1,
 .hero-slogan-wrapper p {
+    position: sticky;
+    top: 40vh;
     font-size: 60px;
     color: #fff;
     text-shadow: 2px 2px #000;
     letter-spacing: 7px;
-    transform: skew(-30deg) rotateX(40deg);
 }
 
-.hero-slogan-wrapper h1{
-    
-}
 .hero-slogan-wrapper p {
+    position: sticky;
+    top: 50vh;
+    padding: 40px 0 0 0;
     font-size: 30px;
 }
 
@@ -176,7 +176,7 @@ main section.my-stack .devices {
     position: relative;
     height: 100%;
     width: 100%;
-    border-top: 1px solid #43A500;
+    /* border-top: 1px solid #43A500; */
 }
 
 .mobile-img-wrapper img {
@@ -208,6 +208,7 @@ main section.my-stack .devices {
     font-size: 18px;
     padding: 30px;
     text-align: justify;
+    box-shadow: 1px 1px 1px #000;
     margin: 0 30px 30px;
     transition: .4s;
 }
@@ -271,7 +272,7 @@ main div.technologies {
 }
 
 
-.tech-icon-wrapper div:hover {
+.tech-icon-wrapper div.bgc-active {
     background-color: #391F5B;
 }
 
@@ -494,6 +495,7 @@ main section.globe {
     height: 100vh;
 }
 
+
 .globe .globe-wrapper {
     position: relative;
     display: flex;
@@ -502,7 +504,6 @@ main section.globe {
     height: 500px;
     border-radius: 100%;
     box-shadow: 2px 2px 40px #ddd;
-    background-color: #43A500;
     perspective: 200px;
 }
 
@@ -521,6 +522,10 @@ main section.globe {
     color: #391F5B;
     transform: rotateX(20deg);
     transition: .5s;
+}
+
+.globe-wrapper h2.animated {
+    animation: h2move .7s linear;
 }
 
 .globe div:last-child {
@@ -745,6 +750,15 @@ footer div.footer-media-wrapper div {
 
 @keyframes technologies {
     to {
+        transform: scale(1);
+    }
+}
+
+@keyframes h2move {
+    50% {
+        transform: scale(1.4) rotateX(-20deg);
+    }
+    100% {
         transform: scale(1);
     }
 }

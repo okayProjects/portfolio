@@ -43,17 +43,28 @@ heroButton.addEventListener('click', () => {
     $('body, html').animate({
         scrollTop: document.querySelector('.my-stack').offsetTop
     });
+});
+
+
+
+const heroSloganH2 = document.querySelector('.hero-slogan-wrapper h1');
+const heroSloganP = document.querySelector('.hero-slogan-wrapper p');
+
+window.addEventListener('scroll', () => {
+    heroSloganH2.style.fontSize = `${(60 - window.scrollY * .25).toFixed()}px`;
+    heroSloganP.style.fontSize = `${(30 - window.scrollY * .125).toFixed()}px`;
 })
 
-// code related to my-stack
 
+// code related to my-stack
+const techIcons = document.querySelectorAll('.tech-icon-wrapper div:not(.h1-wrapper)');
 const myStackAnimations = () => {
     const desktopImg = document.querySelector('.desktop-wrapper .desktop-img-wrapper');
     const desktopImgPosition = document.querySelector('.desktop-wrapper .desktop-img-wrapper').offsetTop;
     const iphone = document.querySelector('.mobile-img-wrapper img');
     const iphoneLeft = document.querySelector('.mobile-img-wrapper .iphone-left');
-    const techIcons = document.querySelectorAll('.tech-icon-wrapper div:not(.h1-wrapper)');
     const technologiesFromTop = document.querySelector('.technologies').offsetTop;
+
     if (window.scrollY >= desktopImgPosition / 1.5) {
         desktopImg.classList.add('animated')
     }
@@ -67,6 +78,20 @@ const myStackAnimations = () => {
 };
 
 window.addEventListener('scroll', myStackAnimations);
+
+
+let activeTech = 1;
+const changeIconBackground = () => {
+    if (activeTech >= [...techIcons].length) activeTech = 0;
+
+    const index = [...techIcons].findIndex(tech =>
+        tech.classList.contains('bgc-active'));
+    [...techIcons][index].classList.remove('bgc-active');
+    [...techIcons][activeTech].classList.add('bgc-active');
+    activeTech++;
+}
+
+setInterval(changeIconBackground, 1500)
 
 // code related to projects
 const projects = [
@@ -98,7 +123,7 @@ const projects = [
         {
             type: 'landing-page',
             name: 'landing-page-4',
-            src: '/assets/images/lp/lp3.jpg',
+            src: '/assets/images/lp/lp4.jpg',
             http: 'https://okayprojects.github.io/softCompanyPage/',
             github: 'https://github.com/okayProjects/softCompanyPage',
             desc: '1111111111111111jestem landing page jeden'
@@ -358,9 +383,7 @@ const gotoFooter = (e) => {
     const name = e.target.name;
     if (name === 'globe') {
         const globeSlogan = document.querySelector('.globe-wrapper h2');
-        // globeSlogan.style.color = 'rgb(57, 31, 91, .5)';
-        globeSlogan.style.fontWeight = 'bold';
-        globeSlogan.style.transform = 'scale(1.2)';
+        globeSlogan.classList.add('animated');
         setTimeout(() => {
             $('body, html').animate({
                 scrollTop: document.querySelector('footer').offsetTop + 10
