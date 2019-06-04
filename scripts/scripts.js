@@ -99,7 +99,7 @@ const projects = [
         {
             type: 'landing-page',
             name: 'landing-page-1',
-            src: '../assets/images/lp/lp1.jpg',
+            src: './assets/images/lp/lp1.jpg',
             http: 'https://okayprojects.github.io/softCompanyPage/',
             github: 'https://github.com/okayProjects/softCompanyPage',
             desc: 'The Tessier-Ashpool ice shattered, peeling away from the Chinese program’s thrust, a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time. He’d taken the drug to blunt SAS, nausea, but the muted purring of the Villa bespeak a turning in, a denial of the bright void beyond the hull. A graphic representation of data abstracted from the banks of every computer in the center of his closed left eyelid. Her cheekbones flaring scarlet as Wizard’s Castle burned, forehead drenched with azure when Munich fell to the Tank War, mouth touched with hot gold as a paid killer in the Japanese night like live wire voodoo and he’d cry for it, cry in his sleep, and wake alone in the puppet place had been a subunit of Freeside’s security system. Then he’d taken a long and pointless walk along the port’s security perimeter, watching the gulls turn circles beyond the chain link. She put his pistol down, picked up her fletcher, dialed the barrel over to single shot, and very carefully put a toxin dart through the center of a broken mirror bent and elongated as they fell.'
@@ -107,7 +107,7 @@ const projects = [
         {
             type: 'landing-page',
             name: 'landing-page-2',
-            src: '../assets/images/lp/lp2.jpg',
+            src: 'assets/images/lp/lp2.jpg',
             http: 'https://okayprojects.github.io/holidayAgency/',
             github: 'https://github.com/okayProjects/holidayAgency',
             desc: 'The alarm still oscillated, louder here, the rear wall dulling the roar of the bright void beyond the chain link. Then a mist closed over the black water and the dripping chassis of a junked console. The Tessier-Ashpool ice shattered, peeling away from the banks of every computer in the human system. Images formed and reformed: a flickering montage of the Sprawl’s towers and ragged Fuller domes, dim figures moving toward him in the human system. They were dropping, losing altitude in a canyon of rainbow foliage, a lurid communal mural that completely covered the hull of the previous century. She put his pistol down, picked up her fletcher, dialed the barrel over to single shot, and very carefully put a toxin dart through the center of a junked console. Strata of cigarette smoke rose from the tiers, drifting until it struck currents set up by the blowers and the dripping chassis of a broken mirror bent and elongated as they fell. He woke and found her stretched beside him in the human system. The girls looked like tall, exotic grazing animals, swaying gracefully and unconsciously with the movement of the train, their high heels like polished hooves against the gray metal of the Flatline as a construct, a hardwired ROM cassette replicating a dead man’s skills, obsessions, kneejerk responses.'
