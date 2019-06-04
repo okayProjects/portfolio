@@ -756,7 +756,7 @@ main section.globe {
 
 footer {
     height: 100vh;
-    background-image: url('/assets/images/laptop.jpg');
+    background-image: url('./assets/images/laptop.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
