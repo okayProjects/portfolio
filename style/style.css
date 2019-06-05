@@ -495,8 +495,12 @@ section.portfolio aside .project-desc {
 section.portfolio aside .project-desc p {
     font-size: 18px;
     color: #fff;
+    transform: translateY(200px);
+    transition: .7s;
 }
-
+section.portfolio aside .project-desc p.show {
+    transform: translateY(0);
+}
 
 section.portfolio aside .projects.selected {
     display: -webkit-box;
@@ -767,7 +771,7 @@ footer {
     display: -ms-flexbox;
     display: flex;
     overflow: hidden;
-    background-color: rgba(0,0,0, .8);
+    background-color: rgba(0,0,0, .7);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -789,11 +793,11 @@ footer .footer-video {
 
 footer .footer-slogan-wrapper {
     margin: 2% 25px 30px 25px;
-    width: 50%;
+    width: 75%;
     -ms-flex-preferred-size: 10%;
         flex-basis: 10%;
     border-radius: 5px;
-    font-size: 28px;
+    font-size: 30px;
     text-transform: capitalize;
     padding: 20px;
     color: #fff;
