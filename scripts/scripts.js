@@ -50,9 +50,19 @@ heroButton.addEventListener('click', () => {
 const heroSloganH2 = document.querySelector('.hero-slogan-wrapper h1');
 const heroSloganP = document.querySelector('.hero-slogan-wrapper p');
 
+
 window.addEventListener('scroll', () => {
-    heroSloganH2.style.fontSize = `${(60 - window.scrollY * .25).toFixed()}px`;
-    heroSloganP.style.fontSize = `${(30 - window.scrollY * .125).toFixed()}px`;
+    let heroSloganH2FontSize = (60 - window.scrollY * .25).toFixed();
+    let heroSloganPFontSize = (30 - window.scrollY * .125).toFixed();
+    if (heroSloganH2FontSize <= 1) {
+        heroSloganH2FontSize = 0;
+    }
+    if (heroSloganPFontSize <= 1) {
+        heroSloganH2FontSize = 0;
+    }
+
+    heroSloganH2.style.fontSize = `${heroSloganH2FontSize}px`;
+    heroSloganP.style.fontSize = `${heroSloganPFontSize}px`;
 })
 
 
@@ -376,6 +386,16 @@ const addLetter = () => {
 addLetter();
 
 // code related to buuton GLOBE
+const globeSectionFromTop = document.querySelector('.globe').offsetTop;
+const globeH2 = document.querySelector('.globe .globe-wrapper h2');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY >= globeSectionFromTop / 1.06) {
+        globeH2.classList.add('show');
+    }
+})
+
+
 
 const gotoFooterBtns = [...document.querySelectorAll('button.contact')];
 
