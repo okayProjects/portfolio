@@ -245,7 +245,6 @@ main section.my-stack .devices {
     position: relative;
     height: 100%;
     width: 100%;
-    /* border-top: 1px solid #43A500; */
 }
 
 .mobile-img-wrapper img {
@@ -495,11 +494,14 @@ section.portfolio aside .project-desc {
 section.portfolio aside .project-desc p {
     font-size: 18px;
     color: #fff;
-    transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    -webkit-transition: .7s;
     transition: .7s;
 }
 section.portfolio aside .project-desc p.show {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
 }
 
 section.portfolio aside .projects.selected {
@@ -681,7 +683,8 @@ main section.globe {
             transform: rotateX(20deg) scale(0);
 }
 .globe-wrapper h2.show {
-    animation: globe-h2-show 1s linear forwards;
+    -webkit-animation: globe-h2-show 1s linear forwards;
+            animation: globe-h2-show 1s linear forwards;
 }
 
 .globe-wrapper h2.animated {
@@ -771,7 +774,7 @@ footer {
     display: -ms-flexbox;
     display: flex;
     overflow: hidden;
-    background-color: rgba(0,0,0, .7);
+    background-color: rgba(0,0,0, .8);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -787,7 +790,8 @@ footer .footer-video {
     left: 0;
     width: 100%;
     min-height: 100%;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
     z-index: -1;
 }
 
@@ -882,14 +886,14 @@ footer div.footer-media-wrapper div {
 }
 
 .contact-forms .footer-media-wrapper:first-of-type div {
-    background-color: #BE5242;
+    background-color: #310083;
     -webkit-transition: .5s;
     transition: .5s;
     -webkit-transform: scale(.8);
             transform: scale(.8);
 }
 .contact-forms .footer-media-wrapper:nth-of-type(2) div {
-    background-color: #310083;
+    background-color: #BE5242;
     -webkit-transition: .5s;
     transition: .5s;
     -webkit-transform: scale(.8);
@@ -910,24 +914,25 @@ footer div.footer-media-wrapper div {
             transform: scale(.8);
 }
 .contact-forms .footer-media-wrapper:first-of-type div:hover {
-    background-color: #fff;
+   background-color: #fff;
     -webkit-transform: scale(1);
             transform: scale(1);
-    border: 1px solid #BE5242;
+    border: 1px solid #310083;
 }
 
 .contact-forms .footer-media-wrapper:first-of-type div:hover i {
-    color: #BE5242;
+    color: #310083; 
 }
 
 .contact-forms .footer-media-wrapper:nth-of-type(2) div:hover {
     background-color: #fff;
     -webkit-transform: scale(1);
             transform: scale(1);
-    border: 1px solid #310083;
+    border: 1px solid #BE5242;
+   
 }
 .contact-forms .footer-media-wrapper:nth-of-type(2) div:hover i {
-    color: #310083; 
+    color: #BE5242;
 }
 .contact-forms .footer-media-wrapper:nth-of-type(3) div:hover {
     background-color: #fff;
@@ -1046,11 +1051,24 @@ footer div.footer-media-wrapper div {
     }
 }
 
-@keyframes globe-h2-show {
+@-webkit-keyframes globe-h2-show {
     49% {
-        transform: rotateX(-20deg) scale(1.4);
+        -webkit-transform: rotateX(-20deg) scale(1.4);
+                transform: rotateX(-20deg) scale(1.4);
     }
     100% {
-        transform: rotateX(20deg) scale(1);
+        -webkit-transform: rotateX(20deg) scale(1);
+                transform: rotateX(20deg) scale(1);
+    }
+}
+
+@keyframes globe-h2-show {
+    49% {
+        -webkit-transform: rotateX(-20deg) scale(1.4);
+                transform: rotateX(-20deg) scale(1.4);
+    }
+    100% {
+        -webkit-transform: rotateX(20deg) scale(1);
+                transform: rotateX(20deg) scale(1);
     }
 }

@@ -134,8 +134,8 @@ const projects = [
             type: 'landing-page',
             name: 'landing-page-4',
             src: './assets/images/lp/lp4.jpg',
-            http: 'https://okayprojects.github.io/softCompanyPage/',
-            github: 'https://github.com/okayProjects/softCompanyPage',
+            http: 'https://okayprojects.github.io/portfolio/',
+            github: 'https://github.com/okayProjects/portfolio',
             desc: 'As a bit of animations junky, this page has been packed with loads of keyframes, vanilla javaScript code, elements being created on the fly or/and fired on scroll. All based on HTML5, CSS3, vanilla JS, ES6 syntax.'
         }
     ],
@@ -193,17 +193,17 @@ const projects = [
         {
             type: 'react-app',
             name: 'reactApp3',
-            src: '#app3',
-            http: 'https://okayprojects.github.io/softCompanyPage/',
-            github: 'https://github.com/okayProjects/softCompanyPage',
-            desc: 'jestem aaaaa3'
+            src: './assets/images/react/weather.jpg',
+            http: 'https://weatherapp-5af3e.web.app/',
+            github: 'https://github.com/okayProjects/react-weatherApp',
+            desc: 'Type in the name of your place to check the current weather conditions. This weather forecast app uses remote API to process data returned in JSON format as well as taking advantage of fetch interface.'
         },
         {
             type: 'react-app',
             name: 'reactApp4',
-            src: '#app4',
-            http: 'https://okayprojects.github.io/softCompanyPage/',
-            github: 'https://github.com/okayProjects/softCompanyPage',
+            src: './assets/images/react/todo.jpg',
+            http: 'https://okayprojects.github.io/react-to-do-app/',
+            github: 'https://github.com/okayProjects/react-to-do-app',
             desc: 'No, no, no! A portfolio which doesn’t comprise ToDoApp? Impossible! So here we go. This app contains a few lines of code dealing with data object, spread operators, arrays. All based on React and ES6 syntax.'
         }
     ]
@@ -434,7 +434,7 @@ const spanFromRight = () => {
         setTimeout(() => {
             span.classList.add('move')
         }, time);
-        time += 500
+        time += 300
     }
 }
 
@@ -449,7 +449,7 @@ let mediaMoveDown = () => {
             }
             top += 120;
         }, time);
-        time += 500;
+        time += 450;
     }
     spanFromRight()
 }
