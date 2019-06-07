@@ -50,10 +50,14 @@ heroButton.addEventListener('click', () => {
 const heroSloganH2 = document.querySelector('.hero-slogan-wrapper h1');
 const heroSloganP = document.querySelector('.hero-slogan-wrapper p');
 
+const heroSloganH2StringFontSize = window.getComputedStyle(heroSloganH2).fontSize;
+const heroSloganH2NumberFontSize = Number(heroSloganH2StringFontSize.slice(0, 2));
+const heroSloganPStringFontSize = window.getComputedStyle(heroSloganP).fontSize;
+const heroSloganPNumberFontSize = +(heroSloganPStringFontSize.slice(0, 2));
 
 window.addEventListener('scroll', () => {
-    let heroSloganH2FontSize = (60 - window.scrollY * .25).toFixed();
-    let heroSloganPFontSize = (30 - window.scrollY * .125).toFixed();
+    let heroSloganH2FontSize = (heroSloganH2NumberFontSize - window.scrollY * .25).toFixed();
+    let heroSloganPFontSize = (heroSloganPNumberFontSize - window.scrollY * .125).toFixed();
     if (heroSloganH2FontSize <= 1) {
         heroSloganH2FontSize = 0;
     }
@@ -439,7 +443,13 @@ const spanFromRight = () => {
 }
 
 let mediaMoveDown = () => {
-    let top = 120;
+    const singleContact = document.querySelector('footer div.footer-media-wrapper');
+    const singleContactString = window.getComputedStyle(singleContact).marginBottom;
+    let index = singleContactString.length
+    if (index >= 5) index = 3;
+    if (index >= 4) index = 2;
+    const singleContactNumber = +(singleContactString.slice(0, index));
+    let top = singleContactNumber;
     let time = 0;
     for (key in medias) {
         setTimeout(() => {
@@ -447,17 +457,24 @@ let mediaMoveDown = () => {
             for (let media of medias) {
                 media.style.top = top + 'px';
             }
-            top += 120;
+            top += singleContactNumber;
         }, time);
         time += 450;
     }
     spanFromRight()
 }
 
-
+let executed = false;
 window.addEventListener('scroll', () => {
-    const footerFromTop = document.querySelector('footer').offsetTop;
-    if (window.scrollY >= footerFromTop) {
-        mediaMoveDown();
+
+
+    if (!executed) {
+        const footerFromTop = document.querySelector('.globe').offsetTop;
+        if (window.scrollY >= footerFromTop * 1.1) {
+            mediaMoveDown();
+            executed = true;
+        }
+
     }
+
 })

@@ -23,7 +23,7 @@
     max-width: 100vw;
     height: 100vh;
     background-image: url('../assets/images/hero-bg.jpg');
-    background-position: 40% center;
+    background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -765,11 +765,6 @@ main section.globe {
 footer {
     position: relative;
     height: 100vh;
-        /* background-image: url('../assets/images/laptop.jpg');
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -826,6 +821,7 @@ footer .footer-media-wrapper {
     position: absolute;
     left: 10%;
     top: 0;
+    margin-bottom: 120px;
     padding-right: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1071,4 +1067,317 @@ footer div.footer-media-wrapper div {
         -webkit-transform: rotateX(20deg) scale(1);
                 transform: rotateX(20deg) scale(1);
     }
+}
+
+@media(max-width: 1024px) {
+
+    .hero {
+        height: 100vh;
+    }
+    
+    .hero-nav {
+        height: 40px;
+    }
+    
+    .hero-nav.invisible{
+        top: -20%;
+    }
+    
+    .hero-nav .logo {
+        -ms-flex-preferred-size: 25%;
+            flex-basis: 25%;
+            margin-left: 5px;
+    }
+    
+    .logo span {
+        font-size: 12px;
+    }
+    
+    .hero-nav ul {
+       flex-grow: 1;
+    }
+    
+    .hero-nav ul>li {
+        padding: 5px;
+    }
+    
+    .nav-item a {
+        font-size: 13px;
+    }
+    
+    .hero-slogan-wrapper h1,
+    .hero-slogan-wrapper p {
+        font-size: 38px;
+        letter-spacing: 3px;
+    }
+    
+    .hero-slogan-wrapper p {
+        padding-top: 10px;
+        font-size: 20px;
+    }
+
+/* main */
+
+main section.my-stack .devices {
+    height: 100vh;
+}
+
+.desktop-wrapper .desktop-img-wrapper.animated {
+    -webkit-transform: skewY(-15deg) translateY(0);
+            transform: skewY(-15deg) translateY(0);
+}
+
+.desktop-wrapper div.desktop-img-wrapper {
+    height: 200px;
+}
+
+.mobile-img-wrapper img {
+    height: 50%;
+    width: 60%;
+    -webkit-transform: translate(50px);
+            transform: translate(50px,70px);
+    -webkit-transition: .5s linear;
+    transition: .5s linear;
+}
+.mobile-img-wrapper img.animated {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+
+.mobile-img-wrapper .iphone-left {
+    height: 50%;
+    width: 50%;
+    -webkit-transform: skew(0, 0) translate(190px, 0px);
+            transform: skew(0, 0) translate(110px, 160px);
+}
+
+.mobile-img-wrapper .iphone-left.animated {
+    -webkit-transform: skew(0deg, 14deg) translate(5px, 80px);
+            transform: skew(0deg, 14deg) translate(5px, 80px);
+}
+
+.desktop-wrapper p,
+.mobile-wrapper p {
+    font-size: 11px;
+    padding: 10px;
+}
+
+.desktop-wrapper button,
+.mobile-wrapper button {
+    width: 85%;
+    padding: 5px;
+    font-size: 13px;
+}
+
+.desktop-wrapper button i,
+.mobile-wrapper button i {
+    font-size: 13px;
+}
+
+/* technologies */
+
+.technologies .tech-icon-wrapper {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+    border-bottom: 2px solid #43A500;
+}
+
+.technologies div.tech-icon-wrapper .h1-wrapper {
+    color: #fff;
+    font-weight: bold;
+    margin-left: 10px;
+    letter-spacing: 3px;
+    background-color: #391F5B;
+}
+.technologies div.tech-icon-wrapper h1 {
+    font-size: 18px;
+    padding: 0px 30px;
+}
+
+.tech-icon-wrapper div {
+    height: 70px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.tech-icon-wrapper div img {
+    width: 80%;
+    height: 80%;
+}
+
+.tech-mac-wrapper {
+    position: relative;
+    height: auto;
+    flex-basis: 40%;
+}
+.tech-mac-wrapper img {
+    width: 70%;
+    height: 60%;
+    position: absolute;
+    left: -5%;
+    top: 20%;
+}
+
+/* section portfolio */
+section.portfolio {
+    padding: 30px 0;
+}
+.portfolio h1 {
+    font-size: 25px;
+}
+
+section.portfolio figure img {
+    height: 40px;
+    width: 100%;
+}
+section.portfolio figure h3 {
+    font-size: 11px;
+}
+section.portfolio figure span {
+    font-size: 10px;
+}
+section.portfolio figure:nth-of-type(2) img {
+    width: 30%;
+}
+section.portfolio figure span i {
+    font-size: 15px;
+}
+
+section.portfolio aside .project-desc {
+    padding: 10px;
+}
+
+section.portfolio aside .project-desc p {
+    font-size: 13px;
+}
+
+section.portfolio aside .projects.selected { 
+    width: 95%;
+    padding: 0;
+}
+
+
+section.portfolio aside .project-page {
+    height: 120px;
+    margin: 20px;
+}
+
+section.portfolio aside .panel {
+    height: 35%;
+}
+.portfolio aside .panel a,
+.portfolio aside .panel i {
+    font-size: 9px;
+    padding: 0 2px;
+}
+
+.portfolio aside .panel i {
+    font-size: 10px;
+}
+
+.panel i:nth-of-type(2) {
+    margin-left: 0;
+}
+
+.portfolio aside .panel button {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    padding: 0px;
+    font-size: 10px;
+    letter-spacing: 0;
+}
+
+.panel button i {
+    margin-left: 5px;
+    color: #43A500;
+    font-weight: bold;
+    font-size: 20px;
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-animation: button-arrow 1.5s linear alternate infinite;
+            animation: button-arrow 1.5s linear alternate infinite;
+}
+
+
+/* section globe */
+.globe {
+    max-width: 90vw;
+}
+.globe .globe-wrapper {
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    -webkit-perspective: 200px;
+            perspective: 200px;
+}
+
+.globe .globe-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+/* footer */
+
+footer{
+    height: 40vh;
+}
+
+footer .footer-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    
+}
+
+footer .footer-slogan-wrapper {
+    margin: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+
+footer .contact-forms {
+    width: 80%;
+}
+
+footer .footer-media-wrapper {
+    position: absolute;
+    left: 10%;
+    top: 0;
+    margin-bottom: 45px;
+    padding-right: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+}
+
+.footer-media-wrapper span,
+.footer-media-wrapper span a {
+    font-size: 12px;
+}
+
+.footer-media-wrapper div i {
+    font-size: 20px;
+}
+
+.footer-media-wrapper span:hover {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+}
+
+footer div.footer-media-wrapper div {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+
 }
