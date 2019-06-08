@@ -146,7 +146,6 @@
 }
 
 .hero-icons-wrapper {
-    
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -371,7 +370,7 @@ main div.technologies {
 
 
 .tech-icon-wrapper div.bgc-active {
-    background-color: #391F5B;
+    border: 1px solid #391F5B;
 }
 
 .tech-icon-wrapper div img {
@@ -1072,6 +1071,9 @@ footer div.footer-media-wrapper div {
 }
 
 @media(max-width: 1024px) {
+    body {
+        max-width: 100vw;
+    }
 
     .hero-nav {
         height: 40px;
@@ -1141,9 +1143,9 @@ main section.my-stack .devices {
     flex-grow: 1;
 }
 
-/* .mobile-wrapper {
-    flex-direction: column;
-} */
+.mobile-wrapper {
+    overflow: hidden;
+}
 
 .mobile-img-wrapper {
     flex-basis: 25%;
@@ -1227,7 +1229,7 @@ main section.my-stack .devices {
 }
 
 .tech-icon-wrapper div img {
-    width: 80%;
+    width: 60%;
     height: 80%;
 }
 
@@ -1237,7 +1239,7 @@ main section.my-stack .devices {
 
 /* section portfolio */
 section.portfolio {
-    padding: 30px 0;
+    padding: 0;
 }
 .portfolio h1 {
     margin: 0;
@@ -1320,9 +1322,7 @@ section.portfolio aside .panel {
 
 
 /* section globe */
-.globe {
-    max-width: 100vw;
-}
+
 .globe .globe-wrapper {
     overflow: hidden;
     width: 300px;
@@ -1352,8 +1352,8 @@ footer .footer-video {
 footer .footer-slogan-wrapper {
     margin: 20px;
     width: 100%;
-    font-size: 8px;
-    background-color: #391F5B;
+    font-size: 9px;
+    background-color: rgba(57, 31, 91, .4);
 }
 
 
@@ -1414,6 +1414,12 @@ footer div.footer-media-wrapper div {
     main section.my-stack .devices {
         height: 160vh;
     }
+
+    .tech-icon-wrapper div img {
+       width: 50%;
+       height: 100%;
+    }
+
     section.portfolio aside .project-page {
         flex-basis: 40%;
     }
@@ -1437,10 +1443,11 @@ footer .footer-video {
 
 footer .footer-slogan-wrapper {
    font-size: 20px;
+   background-color: transparent;
 }
 
 footer .footer-media-wrapper {
-    margin-bottom: 75px;
+    margin-bottom: 60px;
 }
 .footer-media-wrapper span,
 .footer-media-wrapper span a {
