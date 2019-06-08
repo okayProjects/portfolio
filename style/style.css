@@ -60,6 +60,7 @@
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
     color: #fff;
+    margin-left: 10px;
 }
 
 .logo span {
@@ -1083,7 +1084,6 @@ footer div.footer-media-wrapper div {
     .hero-nav .logo {
         -ms-flex-preferred-size: 25%;
             flex-basis: 25%;
-            margin-left: 5px;
     }
     
     .logo span {
@@ -1339,7 +1339,7 @@ section.portfolio aside .panel {
 /* footer */
 
 footer{
-    height: 45vh;
+    height: 65vh;
     background-image: url('../assets/images/laptop.jpg');
     background-position: center;
     background-size: cover;
@@ -1362,21 +1362,7 @@ footer .contact-forms {
 }
 
 footer .footer-media-wrapper {
-    position: absolute;
-    left: 10%;
-    top: 0;
-    margin-bottom: 45px;
-    padding-right: 50px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    overflow: hidden;
+    margin-bottom: 65px;
 }
 
 .footer-media-wrapper span,
@@ -1401,7 +1387,7 @@ footer div.footer-media-wrapper div {
 
 }
 
-@media(orientation: landscape) {
+@media  (max-width: 1024px) and (orientation: landscape){
     .mobile-img-wrapper img {
         height: 60%;
         width: 60%;
