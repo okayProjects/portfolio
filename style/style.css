@@ -1339,7 +1339,7 @@ section.portfolio aside .panel {
 /* footer */
 
 footer{
-    height: 65vh;
+    height: 85vh;
     background-image: url('../assets/images/laptop.jpg');
     background-position: center;
     background-size: cover;
@@ -1362,7 +1362,7 @@ footer .contact-forms {
 }
 
 footer .footer-media-wrapper {
-    margin-bottom: 65px;
+    margin-bottom: 75px;
 }
 
 .footer-media-wrapper span,
