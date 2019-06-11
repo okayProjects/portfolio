@@ -1204,6 +1204,7 @@ main section.my-stack .devices {
 /* technologies */
 
 .technologies {
+    margin: 20px 0;
     flex-direction: column;
 }
 
@@ -1322,6 +1323,9 @@ section.portfolio aside .panel {
 
 
 /* section globe */
+.globe{
+    margin: 30px 0;
+}
 
 .globe .globe-wrapper {
     overflow: hidden;
@@ -1409,7 +1413,7 @@ footer div.footer-media-wrapper div {
     
     .mobile-img-wrapper .iphone-left.animated {
         -webkit-transform: skew(0deg, 14deg) translate(-5px, 80px);
-                transform: skew(0deg, 14deg) translate(20px, 50px);
+                transform: skew(0deg, 14deg) translate(20px, 40px);
     }
     
 
