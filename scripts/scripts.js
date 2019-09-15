@@ -190,9 +190,9 @@ const projects = [
             type: 'react-app',
             name: 'reactApp2',
             src: './assets/images/react/okay.jpg',
-            http: 'https://okayprojects.github.io/okay/',
+            http: 'https://okay-school.web.app/',
             github: 'https://github.com/okayProjects/okay',
-            desc: 'This react SPA app takes the advantage of routing as well as of Redux. It acts as a language school webpage. However, it wouldn’t take much to transfer it into any business you dream of.'
+            desc: 'This React SPA app takes the advantage of routing as well as of Redux, nicely working with Google Firebase. It acts as a language school webpage. However, it wouldn’t take much to transfer it into any business you dream of.'
         },
         {
             type: 'react-app',
